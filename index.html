@@ -1,4 +1,156 @@
-Smeedee project page
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smeedee - management tool for agile projects</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="js/_class.noobSlide.js"></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+		//SAMPLE 4 (walk to item)
+		var nS4 = new noobSlide({
+			box: $('slider'),
+			items: $$('#slider div'),
+			size: 800,
+			handles: $$('#handles span b'),
+			autoPlay: true,
+			onWalk: function(currentItem,currentHandle){
+				this.handles.removeClass('active');
+				currentHandle.addClass('active');
+			}
+			
+		});
+	});
+</script>
+</head>
 
-changed by ogborstad:)
+<body>
+<div id="stripes"></div>
+<div id="wrap">
+	<div id="menu">
+    	<dl>
+        	<dt><a href="#">home</a></dt>
+            <dt><a href="#">smeedee @ codeplex</a></dt>
+            <dt><a href="#">about this site</a></dt>
+            <dt><a href="#">wiki</a></dt>
+        </dl>
+        
+        <div id="logo"></div>
+    </div><!-- menu end -->
+    
+    <div id="illustration">
+			<p class="buttons" id="handles">
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+            </p>
+            <div class="mask">
+                <div id="slider">
+        
+                    <div>
+                    	<img src="images/agile_illustration.png" alt="Photo" />
+                        <h3>1. Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+                    </div>
+        
+                    <div>
+                    	<img src="images/img2.jpg" alt="Photo" />
+                        <h3>2. Nullam porttitor tortor et sem</h3>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+                    </div>
+        
+                    <div>
+                    	<img src="images/img3.jpg" alt="Photo" />
+                        <h3>3. Aenean consectetuer nibh sedt</h3>
+                        
+                        <ul>
+                            <li>Duis consequat laoreet libero.</li>
+                            <li>Nullam scelerisque porta arcu.</li>
+                            <li>Praesent ut tortor quis nunc vehicula interdum.</li>
+                            <li>Cras ultrices venenatis justo.</li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                    	<img src="images/img4.jpg" alt="Photo" />
+                        <h3>4. Pellentesque ac dolor</h3>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+                    </div>
+        
+                    <div>
+                    	<img src="images/img5.jpg" alt="Photo" />
+                        <h3>5. Pellentesque ac dolor</h3>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+                    </div>        
+                </div>
+            </div
+	</div><!-- illustration end -->
+    
+    <div id="textbox">
+   		<!-- boxes for rounded corners -->
+    	<div id="top">
+        	<b class="b5"></b>
+            <b class="b4"></b>
+            <b class="b3"></b>
+            <b class="b2"></b>
+            <b class="b1"></b>
+        </div>
+        <div id="bot">
+        	<b class="b1"></b>
+            <b class="b2"></b>
+            <b class="b3"></b>
+            <b class="b4"></b>
+            <b class="b5"></b>
+        </div>
+        <!-- end of boxes for rounded corners -->
+        
+		<div id="textcontent">
+        	<div class="contentRight">
+            	<h1>Get Smeedee</h1>
+            	<a href="#" class="downloadButton"></a>
+                <p class="small">Supports: Win/Mac/Linux</p>
+            </div>
+            
+            
+            <h1 style="margin-right:255px;">Project Description</h1>
+            <p>
+            Smeedee is a monitor that harvests key information from running software projects. Smeedee finds useful information in the Version Control System (source control), Continuous Integration system (build servers), source code itself and in the project management tool you are using. The key information is interpreted and then visualized on a digital Dashboard. 
+            </p>
+            
+            <p>So instead of working in an information centric environment, were you have to find and interpret the data yourself. Smeedee will find and interpret the data for you, and then push key information to you and the rest of the team.
+            </p>
+            
+            <p>With Smeedee, you’ll experience a better flow of information in your team. The teamwork will become more transparent and you’ll have a superior tool for maximizing productivity and quality in software projects.
+            </p>
+            
+            <div class="break"></div>
+            
+            <h2>Features:</h2> 
+            <p>
+            Smeedee can tell you who has changed to the source code lately, and what they have done<br />
+            Smeedee can tell you when a build is broken<br />
+            Smeedee can tell you who is the most active member on your team<br />
+            Smeedee can tell you how many working days you have left before the next release<br />
+            Smeedee can tell you about the overall activity in the project<br />
+            Smeedee can tell you about the performance of your team (sprint Burndown)
+            </p>
+        </div><!-- textcontent end -->
+  </div><!-- textbox end -->
+	
+    <div id="footer" style="color:#FFF">
+    	
 
+    </div><!-- footer end -->
+
+	
+</div><!-- wrap end -->
+
+</body>
+</html>

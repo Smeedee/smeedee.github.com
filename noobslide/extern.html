@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Noobslide test</title>
+
+<link rel="stylesheet" href="_web.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="mootools-1.2-core.js"></script>
+<script type="text/javascript" src="_class.noobSlide.packed.js"></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+		//SAMPLE 4 (walk to item)
+		var nS4 = new noobSlide({
+			box: $('box4'),
+			items: $$('#box4 div'),
+			size: 480,
+			handles: $$('#handles4 span'),
+			addButtons: {
+				previous: $('prev4'),
+				play: $('play4'),
+				stop: $('stop4'),
+				next: $('next4')
+			},
+			onWalk: function(currentItem,currentHandle){
+				$('info4').set('html',currentItem.getFirst().innerHTML);
+				this.handles.removeClass('active');
+				currentHandle.addClass('active');
+			}
+			
+		});
+	});
+</script>
+
+</head>
+
+    
+<body>
+
+
+<!-- SAMPLE 4 -->
+<h2>Sample 4</h2>
+<div class="sample">
+	<div class="mask3">
+		<div id="box4">
+
+			<div>
+				<h3>1. Lorem ipsum dolor sit amet</h3>
+				<img src="img1.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Quisque aliquet accumsan lectus. Nullam porttitor tortor et sem. Nulla lobortis, leo elementum fringilla mollis, magna neque rhoncus lorem, vitae venenatis tellus felis vitae lacus. Nunc ante. Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>2. Nullam porttitor tortor et sem</h3>
+				<img src="img2.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Quisque aliquet accumsan lectus. Nullam porttitor tortor et sem. Nulla lobortis, leo elementum fringilla mollis, magna neque rhoncus lorem, vitae venenatis tellus felis vitae lacus.</p>
+				<p>Nunc ante. Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>3. Aenean consectetuer nibh sedt</h3>
+				<img src="img3.jpg" alt="Photo" />
+				<ul>
+					<li>Duis consequat laoreet libero.</li>
+					<li>Nullam scelerisque porta arcu.</li>
+					<li>Praesent ut tortor quis nunc vehicula interdum.</li>
+					<li>Cras ultrices venenatis justo.</li>
+					<li>Duis eu ligula at justo tempus varius.</li>
+					<li>Vivamus mattis ante et arcu.</li>
+					<li>Nulla eleifend dignissim neque.</li>
+					<li>Donec ut elit vel nisi mollis volutpat.</li>
+				</ul>
+			</div>
+
+			<div>
+				<h3>4. Pellentesque ac dolor</h3>
+				<img src="img4.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Quisque aliquet accumsan lectus. Nullam porttitor tortor et sem. Nulla lobortis, leo elementum fringilla mollis, magna neque rhoncus lorem, vitae venenatis tellus felis vitae lacus. Nunc ante. Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>5. Pellentesque ac dolor</h3>
+				<img src="img5.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>6. Lorem ipsum dolor sit amet</h3>
+				<img src="img6.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Quisque aliquet accumsan lectus. Nullam porttitor tortor et sem. Nulla lobortis, leo elementum fringilla mollis, magna neque rhoncus lorem, vitae venenatis tellus felis vitae lacus. Nunc ante. Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>7. Nullam porttitor tortor et sem</h3>
+				<img src="img7.jpg" alt="Photo" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis ultrices tristique diam.</p>
+				<p>Quisque aliquet accumsan lectus. Nullam porttitor tortor et sem. Nulla lobortis, leo elementum fringilla mollis, magna neque rhoncus lorem, vitae venenatis tellus felis vitae lacus.</p>
+				<p>Nunc ante. Cras sodales. Quisque augue enim, rutrum quis, dignissim quis, convallis molestie, nisi. Praesent at lacus. Aenean tincidunt. In hac habitasse platea dictumst.</p>
+			</div>
+
+			<div>
+				<h3>8. Aenean consectetuer nibh sedt</h3>
+				<img src="img8.jpg" alt="Photo" />
+				<ul>
+					<li>Duis consequat laoreet libero.</li>
+					<li>Nullam scelerisque porta arcu.</li>
+					<li>Praesent ut tortor quis nunc vehicula interdum.</li>
+					<li>Cras ultrices venenatis justo.</li>
+					<li>Duis eu ligula at justo tempus varius.</li>
+					<li>Vivamus mattis ante et arcu.</li>
+					<li>Nulla eleifend dignissim neque.</li>
+					<li>Donec ut elit vel nisi mollis volutpat.</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<h4>Show: <span id="info4"></span></h4>
+    <p class="buttons">
+		<span id="prev4">&lt;&lt; Previous</span>
+		<span id="play4">Play &gt;</span>
+		<span id="stop4">Stop</span>
+		<span id="next4">Next &gt;&gt;</span>
+	</p>
+	<p class="buttons" id="handles4">
+		<span>1. Uno</span>
+		<span>2. Dos</span>
+		<span>3. Tres</span>
+		<span>4. Cuatro</span>
+		<span>5. Cinco</span>
+		<span>6. Seis</span>
+		<span>7. Siete</span>
+		<span>8. Ocho</span>
+	</p>
+</div>
+
+
+</body>
+</html>
