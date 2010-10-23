@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smeedee - A management tool for agile projects</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="js/_class.noobSlide.js"></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+        var nS4 = new noobSlide({
+            box: $('slider'),
+            items: $$('#slider div'),
+            size: 800,
+            handles: $$('#handles span b'),
+            autoPlay: true,
+            onWalk: function(currentItem,currentHandle){
+                this.handles.removeClass('active');
+                currentHandle.addClass('active');
+            }
+            
+        });
+    });
+</script>
+</head>
+
+<body>
+<div id="stripes"></div>
+<div id="wrap">
+    <div id="menu">
+        <dl>
+            ${self.menu()}
+        </dl>
+        <div id="logo"></div>
+    </div>
+    
+
+    <div id="illustration">
+        ${self.illustration()}
+    </div>
+    
+
+    <div id="textbox">
+        ${self.rounded_corner_boxes()}
+
+        <div id="textcontent">
+            <div class="contentRight">
+                ${self.contentright()}
+            </div>
+            
+            ${self.body()}    
+
+        </div>
+    </div>
+    
+    <div id="footer" style="color:#FFF" />
+
+</div>
+
+</body>
+</html>
+
+##
+## Block definitions.
+##
+
+## Right content of main view
+<%def name='contentright()'>
+    ## If you want to expand this menu, e.g. in a subclass, you can override
+    ## this method, and add to it. E.g.:
+    ## <%def name='contentright()'>
+    ##     ${parent.contentright()}
+    ##     Some extra html here.
+    ## </%def>
+    <h1>Get Smeedee</h1>
+    <a href="#" class="downloadButton"></a>
+    <p class="small">Supports: Win/Mac/Linux</p>
+</%def>
+
+## Top main menu
+<%def name='menu()'>
+            ## If you want to expand this menu, e.g. in a subclass, you can override
+            ## this method, and add to it. E.g.:
+            ## <%def name='menu()'>
+            ##     ${parent.menu()}
+            ##     Some extra html here.
+            ## </%def>
+            <dt><a href="index.html">Home</a></dt>
+            <dt><a href="#">Download</a></dt>
+            <dt><a href="faq.html">FAQ</a></dt>
+            <dt><a href="#">Documentation</a></dt>
+            <dt><a href="#">Contact</a></dt>
+</%def>
+
+## Javascript illustration animator
+<%def name='illustration()'>
+            <p class="buttons" id="handles">
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+            </p>
+            <div class="mask">
+                <div id="slider">
+        
+                    <div>
+                        <img src="images/agile_illustration.png" alt="Photo" />
+                        <h3>1. Lorem ipsum dolor sit amet</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img2.jpg" alt="Photo" />
+                        <h3>2. Nullam porttitor tortor et sem</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac
+                            dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis
+                            ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img3.jpg" alt="Photo" />
+                        <h3>3. Aenean consectetuer nibh sedt</h3>
+                        <ul>
+                            <li>Duis consequat laoreet libero.</li>
+                            <li>Nullam scelerisque porta arcu.</li>
+                            <li>Praesent ut tortor quis nunc vehicula interdum.</li>
+                            <li>Cras ultrices venenatis justo.</li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <img src="images/img4.jpg" alt="Photo" />
+                        <h3>4. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img5.jpg" alt="Photo" />
+                        <h3>5. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>        
+                </div>
+            </div>
+</%def>
+
+## Boxes used to create rounded corners
+<%def name='rounded_corner_boxes()'>
+        <div id="top">
+            <b class="b5"></b>
+            <b class="b4"></b>
+            <b class="b3"></b>
+            <b class="b2"></b>
+            <b class="b1"></b>
+        </div>
+        <div id="bot">
+            <b class="b1"></b>
+            <b class="b2"></b>
+            <b class="b3"></b>
+            <b class="b4"></b>
+            <b class="b5"></b>
+        </div>
+</%def>
