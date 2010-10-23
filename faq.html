@@ -1,38 +1,208 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smeedee - A management tool for agile projects</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="js/_class.noobSlide.js"></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+        var nS4 = new noobSlide({
+            box: $('slider'),
+            items: $$('#slider div'),
+            size: 800,
+            handles: $$('#handles span b'),
+            autoPlay: true,
+            onWalk: function(currentItem,currentHandle){
+                this.handles.removeClass('active');
+                currentHandle.addClass('active');
+            }
+            
+        });
+    });
+</script>
+</head>
+
 <body>
+<div id="stripes"></div>
+<div id="wrap">
+    <div id="menu">
+        <dl>
+            
+            <dt><a href="index.html">Home</a></dt>
+            <dt><a href="#">Download</a></dt>
+            <dt><a href="faq.html">FAQ</a></dt>
+            <dt><a href="#">Documentation</a></dt>
+            <dt><a href="#">Contact</a></dt>
+
+        </dl>
+        <div id="logo"></div>
+    </div>
+    
+
+    <div id="illustration">
+        
+            <p class="buttons" id="handles">
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+            </p>
+            <div class="mask">
+                <div id="slider">
+        
+                    <div>
+                        <img src="images/agile_illustration.png" alt="Photo" />
+                        <h3>1. Lorem ipsum dolor sit amet</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img2.jpg" alt="Photo" />
+                        <h3>2. Nullam porttitor tortor et sem</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac
+                            dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis
+                            ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img3.jpg" alt="Photo" />
+                        <h3>3. Aenean consectetuer nibh sedt</h3>
+                        <ul>
+                            <li>Duis consequat laoreet libero.</li>
+                            <li>Nullam scelerisque porta arcu.</li>
+                            <li>Praesent ut tortor quis nunc vehicula interdum.</li>
+                            <li>Cras ultrices venenatis justo.</li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <img src="images/img4.jpg" alt="Photo" />
+                        <h3>4. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img5.jpg" alt="Photo" />
+                        <h3>5. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>        
+                </div>
+            </div>
+
+    </div>
+    
+
+    <div id="textbox">
+        
+        <div id="top">
+            <b class="b5"></b>
+            <b class="b4"></b>
+            <b class="b3"></b>
+            <b class="b2"></b>
+            <b class="b1"></b>
+        </div>
+        <div id="bot">
+            <b class="b1"></b>
+            <b class="b2"></b>
+            <b class="b3"></b>
+            <b class="b4"></b>
+            <b class="b5"></b>
+        </div>
+
+
+        <div id="textcontent">
+            <div class="contentRight">
+                
+    <h1>Get Smeedee</h1>
+    <a href="#" class="downloadButton"></a>
+    <p class="small">Supports: Win/Mac/Linux</p>
+
+            </div>
+            
+            
 
 <h1>Frequently Asked Questions (FAQ)</h1>
 
-<p><b>Who is Smeedee for?</b>
-<br>Smeedee is a tool for those involved with software development projects, such as developers, project managers and stakeholders.</p>
-
-<p><b>What does Smeedee mean?</b>
-<br> Smeedee is the pronounciation of the Norwegian word "smidig" which means agile.
+<h3>Who is Smeedee for?</h3>
+<p>
+    Smeedee is a tool for those involved with software development projects,
+    such as developers, project managers and stakeholders.
 </p>
 
-<p><b>Why is Smeedee useful?</b>
-<br> The motivation for deploying a tool like Smeedee is raising awareness and visibility of the quality in your software product and development process. This is strongly related to the benefits of agile development methodology.
+<h3>What does Smeedee mean?</h3>
+<p>
+    Smeedee is the pronounciation of the Norwegian word "smidig" which means agile.
 </p>
 
-<p><b>Do I have to pay for Smeedee?</b>
-<br> Smeedee is free for both personal and commercial projects. It is also open source. See the <a href="#licensing">Licensing</a> for details.
+<h3>Why is Smeedee useful?</h3>
+<p>
+    The motivation for deploying a tool like Smeedee is raising awareness and
+    visibility of the quality in your software product and development process.
+    This is strongly related to the benefits of agile development methodology.
 </p>
 
-<p id="licensing"><b>Licensing</b>
-<br> Smeedee is licensed under <a href="http://www.gnu.org/licenses/lgpl.html">GNU Lesser General Public License (LGPL)</a>.
+<h3>Do I have to pay for Smeedee?</h3>
+<p>
+    Smeedee is free for both personal and commercial projects. It is also open
+    source. See the <a href="#licensing">Licensing</a> for details.
 </p>
 
-<p><b>What platforms are supported?</b>
-<br> Smeedee consists of a server and client component. The server can be run on Windows XP and later. The client can be run in any browser supporting Silverlight 4. Refer to Microsoft for <a href="http://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx">Silverlight requirements</a>.
+<h3>How is Smeedee licensed?</h3>
+<p>
+    Smeedee is licensed under <a href="http://www.gnu.org/licenses/lgpl.html">GNU
+    Lesser General Public License (LGPL)</a>.
 </p>
 
-<p><b>How do I install Smeedee?</b>
-<br>Please see the <a href="how_to_install.html">How to Install</a> page.
+<h3>What platforms are supported?</h3>
+<p>
+    Smeedee consists of a server and client component. The server can be run on
+    Windows XP and later. The client can be run in any browser supporting
+    Silverlight 4. Refer to Microsoft for <a
+    href="http://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx">Silverlight
+    requirements</a>.
 </p>
 
-<p><b>How do I upgrade Smeedee without loosing any data?</b>
-<br></p>
+<h3>How do I install Smeedee?</h3>
+<p>
+    Please see the <a href="how_to_install.html">How to Install</a> page.
+</p>
 
+
+    
+
+        </div>
+    </div>
+    
+    <div id="footer" style="color:#FFF" />
+
+</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
