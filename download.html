@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smeedee - A management tool for agile projects</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="js/_class.noobSlide.js"></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+        var nS4 = new noobSlide({
+            box: $('slider'),
+            items: $$('#slider div'),
+            size: 800,
+            handles: $$('#handles span b'),
+            autoPlay: true,
+            onWalk: function(currentItem,currentHandle){
+                this.handles.removeClass('active');
+                currentHandle.addClass('active');
+            }
+            
+        });
+    });
+</script>
+</head>
+
+<body>
+<div id="stripes"></div>
+<div id="wrap">
+    <div id="menu">
+        <dl>
+            
+            <dt><a href="index.html">Home</a></dt>
+            <dt><a href="#">Download</a></dt>
+            <dt><a href="faq.html">FAQ</a></dt>
+            <dt><a href="#">Documentation</a></dt>
+            <dt><a href="#">Contact</a></dt>
+
+        </dl>
+        <div id="logo"></div>
+    </div>
+    
+
+    <div id="illustration">
+        
+            <p class="buttons" id="handles">
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+                <span><b></b></span>
+            </p>
+            <div class="mask">
+                <div id="slider">
+        
+                    <div>
+                        <img src="images/agile_illustration.png" alt="Photo" />
+                        <h3>1. Lorem ipsum dolor sit amet</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img2.jpg" alt="Photo" />
+                        <h3>2. Nullam porttitor tortor et sem</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac
+                            dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis
+                            ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img3.jpg" alt="Photo" />
+                        <h3>3. Aenean consectetuer nibh sedt</h3>
+                        <ul>
+                            <li>Duis consequat laoreet libero.</li>
+                            <li>Nullam scelerisque porta arcu.</li>
+                            <li>Praesent ut tortor quis nunc vehicula interdum.</li>
+                            <li>Cras ultrices venenatis justo.</li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <img src="images/img4.jpg" alt="Photo" />
+                        <h3>4. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>
+        
+                    <div>
+                        <img src="images/img5.jpg" alt="Photo" />
+                        <h3>5. Pellentesque ac dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
+                            Fusce hendrerit. Duis ultrices tristique diam.
+                        </p>
+                    </div>        
+                </div>
+            </div>
+
+    </div>
+    
+
+    <div id="textbox">
+        
+        <div id="top">
+            <b class="b5"></b>
+            <b class="b4"></b>
+            <b class="b3"></b>
+            <b class="b2"></b>
+            <b class="b1"></b>
+        </div>
+        <div id="bot">
+            <b class="b1"></b>
+            <b class="b2"></b>
+            <b class="b3"></b>
+            <b class="b4"></b>
+            <b class="b5"></b>
+        </div>
+
+
+        <div id="textcontent">
+            <div class="contentRight">
+                
+    <h1>Get Smeedee</h1>
+    <a href="#" class="downloadButton"></a>
+    <p class="small">Supports: Win/Mac/Linux</p>
+
+            </div>
+            
+            
+
+<h1>Download and install</h1>
+
+<h3>So this is what you need to have before you install</h3>
+<p>
+<ul>
+<li>Microsoft .NET Framework 4.0 (<a href="http://www.microsoft.com">download</a>)</li>
+<li>Internet Information Services with ASP.NET and IIS 6.0 Metabase Compatability enabled</li>
+</ul>
+
+
+<h3>IIS Troubleshooting</h3>
+<p>
+The server part of Smeedee is hosted by IIS, and if it is not correctly configured, Smeedee won't work. You may see symptoms like no Admin Tasks, never-ending loading of slideshow configuration or just no Smeedee at all! Here is a list of things you can check to verify your IIS configuration.
+</p>
+
+<h4>App Pool .NET version</h4>
+
+<p>Make sure that the application pool that the smeedee application runs in is set to use .NET 4.0.
+<ol>
+<li>Open the IIS Management Console</li>
+<li>TODO: Make screenshots and step by step instructions</li>
+</ol>
+ </p>
+
+<h4>ISAPI Filters for .NET 4.0</h4>
+
+<p>Make sure that the ISAPI fileters for .NET 4.0 are added and enabled</p>
+<ol>
+<li>Open the IIS Management Console</li>
+<li>TODO: Make screenshots and step by step instructions</li>
+</ol>    
+
+        </div>
+    </div>
+    
+    <div id="footer" style="color:#FFF" />
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
