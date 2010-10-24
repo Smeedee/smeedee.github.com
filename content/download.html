@@ -1,0 +1,33 @@
+<%inherit file="../templates/base.html"/>
+
+<h1>Download and install</h1>
+
+<h3>So this is what you need to have before you install</h3>
+<p>
+<ul>
+<li>Microsoft .NET Framework 4.0 (<a href="http://www.microsoft.com">download</a>)</li>
+<li>Internet Information Services with ASP.NET and IIS 6.0 Metabase Compatability enabled</li>
+</ul>
+
+
+<h3>IIS Troubleshooting</h3>
+<p>
+The server part of Smeedee is hosted by IIS, and if it is not correctly configured, Smeedee won't work. You may see symptoms like no Admin Tasks, never-ending loading of slideshow configuration or just no Smeedee at all! Here is a list of things you can check to verify your IIS configuration.
+</p>
+
+<h4>App Pool .NET version</h4>
+
+<p>Make sure that the application pool that the smeedee application runs in is set to use .NET 4.0.
+<ol>
+<li>Open the IIS Management Console</li>
+<li>TODO: Make screenshots and step by step instructions</li>
+</ol>
+ </p>
+
+<h4>ISAPI Filters for .NET 4.0</h4>
+
+<p>Make sure that the ISAPI fileters for .NET 4.0 are added and enabled</p>
+<ol>
+<li>Open the IIS Management Console</li>
+<li>TODO: Make screenshots and step by step instructions</li>
+</ol>
