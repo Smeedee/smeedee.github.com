@@ -20,7 +20,10 @@ The server part of Smeedee is hosted by IIS, and if it is not correctly configur
 <p>Make sure that the application pool that the smeedee application runs in is set to use .NET 4.0.
 <ol>
 <li>Open the IIS Management Console</li>
-<li>TODO: Make screenshots and step by step instructions</li>
+<li>On the left hand side click Application Pools under the server node</li>
+<li>Find the Smeedee App Pool and click Basic Settings</li>
+<li>Confirm that the .NET Framework Version is set to 4.0</li>
+<img src="images/AppPoolDialog.png"/>
 </ol>
  </p>
 
@@ -29,5 +32,24 @@ The server part of Smeedee is hosted by IIS, and if it is not correctly configur
 <p>Make sure that the ISAPI fileters for .NET 4.0 are added and enabled</p>
 <ol>
 <li>Open the IIS Management Console</li>
-<li>TODO: Make screenshots and step by step instructions</li>
+<li>Select Default Web Site under the server node</li>
+<li>Double Click the icon with the name ISAPI FIlters. There should be two entries for .NET 4.0 like the image below
+<img src="images/ISAPI_FiltersDialog.png" />
+</li>
+<li>If you are missing the .NET 4.0 entries you need to add the file C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_filter.dll</li>
 </ol>
+</p>
+
+
+<h4>ISAPI & CGI Restrictions</h4>
+
+<p>Make sure that ISAPI and CGI is enabled</p>
+<ol>
+<li>Open the IIS Management Console</li>
+<li>Select the server in the list on the left</li>
+<li>Double click the icon with the text ISAPI and CGI Restrictions</li>
+<li>Confirm that the .NET 4.0 ISAPI filters are set to "allowed"
+<img src="images/ISAPI_CGI_RestrctionsDialog.png" />
+</li>
+</ol>
+</p>
