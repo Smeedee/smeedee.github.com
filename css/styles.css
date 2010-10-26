@@ -222,8 +222,10 @@ div#textcontent > p {
 	margin-left:.5em;
 }
 
+div.contentRight > a:link,a:visited {
+    color:#fff;
+}
 
-
-
-
-
+div.contentRight > a:hover,a:focus {
+    color:red;
+}
