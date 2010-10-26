@@ -141,6 +141,10 @@ div#textbox {
 	/*border:1px solid #aaa;*/
 }
 
+div.contentLeft {
+	margin-right:225px;
+}
+
 div.contentRight {
 	display:block;
 	float:right;
