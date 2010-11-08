@@ -1,0 +1,92 @@
+<%inherit file="../templates/documentation.html"/>
+
+<B>HOWTO Get started with a new widget for Smeedee</b>
+
+<h1>Start a new Silverlight Application Project</h1>
+
+<p>
+We create it as a separate project. This makes it easy to run without firing up Smeedee every time. Say yes to generating a web project to host it :)
+</p>
+
+<p>
+	Tip: We recommend using a separate test project for testing. We use a setup where we have three projects for each component: Two .NET 4.0 Class Library project, one Silverlight Application Project. We create classes in one .NET project, and links the files into the Silverlight project by right clicking in the Silverlight project and choose add existing. The Add button is a drop down, and there you can choose add as link. The last of the .NET 4.0 projects acts as the test project. In this project we write tests and execute them using our favorite .NET test-runner. This way we don't have to fire up Silverlight to run unit tests :) You are free to do what ever you like, but if you want us to add your widget to our code base, you will have to follow this scheme.
+</p>
+
+<h1>Reference the Smeedee Assemblies</h1>
+
+<p>
+You will have to add references to these assemblies in your project. Please note that the assemblies exists in both .NET 4.0 and Silverlight 4.0 versions, and you will have to reference the proper ones for each of your projects, or just the silverlight ones if you're not cool like us and do the tree project scheme :)
+</p>
+<p>
+
+.NET<br/>
+Smeedee.Client.Framework<br/>
+Smeedee.DomainModels<br/>
+Smeedee.DomainModels.Framework<br/>
+TinyMVVM<br/>
+Ninject<br/>
+NewtonSoft.Json<br/>
+<br/><br/>
+Silverlight:<br/>
+Smeedee.Client.Framework.SL<br/>
+Smeedee.DomainModels.SL<br/>
+Smeedee.DomainModels.Framework.SL<br/>
+TinyMVVM.SL<br/>
+Ninject<br/>
+NewtonSoft.Json.Silverlight<br/>
+
+</p>
+
+
+<h1>Take a look at the Widget class</h1>
+
+<p>
+We have a base class in Smeedee called Widget. It is really a ViewModel that we present on the screen, but you get to choose what it will show. Pretty cool ey? The Smeedee.Client.Framework.ViewModels.Widget class contains some important properties:
+</p>
+
+<h3>UserControl - View</h3>
+This property is the actual UserControl that will be shown when your widget is displayed on the screen. It is your Widget class' responsibility to set this property to something meaningful. If not, nothing will appear on the screen :'(
+
+UserControl - SettingsView
+This is the view that is displayed when the user enters settings mode for your widget.
+
+String - Title
+This is the default title of your Widget. It is very likely to be overridden by the user, but it is still a good idea to set it!
+
+Configuration - Configuration
+This property contains your widget with the current configuration to use. The configuration is usually set by the user using the SettingsView. The Configuration is unique to each instance of the widget, and it may change during runtime if some other client instance changes the configuration from some other place.
+
+event - ConfigurationChanged
+This event will fire if the Configuration changed. You should respond to this event by updating the view accordingly. You can do this very easy by just doing your normal refresh routine again when this event is fired. It should not be very often.
+
+method - NewConfiguration()
+Override this to return your default configuration. A fresh instance of your widget will get this configuration. An already configured widget instance can also get this configuration if the configuration from the server did not make it to the client in time for widget creation.
+
+3. Start coding!
+
+We encourage TDD, but this is not a tutorial on that subject. This means that I will omit the testing part of the project from now on.
+
+We also _enforce_ the MVVM pattern. All our frameworks expects MVVM to be used, so we will be very sad if you don't follow up on this, but again, this is not a tutorial on MVVM. A Smeedee Widget consists of six parts:
+
+The Widget Class
+This is the entry point for Smeedee to start your Widget. When Smeedee is asked to create a widget, this class is instantiated and added to the slide show.
+
+The View
+This is the visual presentation of some data. The "front side" of a widget.
+
+The Settings View
+This is where the users can customize the behavior and appearance of the widget. It is the "back side" of your widget. 
+
+The ViewModels
+These are classes that contains all the data and commands that are available to the views.
+
+The Controller
+This class is responsible for fetching new data from the datasource and storing data back to the datasource.
+
+You can do this is any order you like, but I usually start with creating a ViewModel. All viewmodels must inherit from the base view model in Smeedee: Smeedee.Client.Framework.ViewModel.AbstractViewModel
+
+Tip: AbstractViewModel contains a method for making property changed notifications strongly typed called TriggerPropertyChanged. Use this to make future name-changes easier.
+
+After you have created your view model for the view you need to create the controller. The controller will get all dependencies injected into the constructor when it is created. This means that you can simply take parameters in your constructor, and Smeedee will provide them if they are available. The parameters needs to be interfaces, usually these include the IRepository<SomeDomainModel>. ISaveDomainModels<T>, ILog and the likes. This also means that you can easily unit test the controller with mock objects.
+
+
