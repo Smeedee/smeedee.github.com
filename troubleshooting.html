@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
 <script type="text/javascript" src="js/mootools-1.2-core.js"></script>
-<script type="text/javascript" src="js/_class.noobSlide.js"></script>
+<script type="text/javascript" src="js/noobslide.js"></script>
 <script type="text/javascript">
 window.addEvent('domready',function(){
         var nS4 = new noobSlide({
@@ -129,19 +129,23 @@ window.addEvent('domready',function(){
 
 
         <div id="textcontent">
+        	
             <div class="contentRight">
                 
-    <a href="faq.html">FAQ</a><br />
-    <a href="troubleshooting.html">Troubleshooting</a><br />
+    <h1>Documentation</h1>
+    <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="troubleshooting.html">Troubleshooting</a></li>
+    </ul>
 
             </div>
-            
-            
+            <div class="contentLeft">
+                
 
-<h1>Troubleshooting</h1>
+<h1 style="margin-right:255px;">Troubleshooting</h1>
 
-<h2>Out of browser experience</h2>
-<h3>Some of my widgets are missing.</h3>
+<h2 style="margin-right:255px;">Out of browser experience</h2>
+<h4>Some of my widgets are missing.</h4>
 <p>
     We have experienced some issues with newer versions of Windows not properly
     resolving localhost to 127.0.0.1. If you experience issues where only some
@@ -162,7 +166,7 @@ window.addEvent('domready',function(){
 The server part of Smeedee is hosted by IIS, and if it is not correctly configured, Smeedee won't work. You may see symptoms like no Admin Tasks, never-ending loading of slideshow configuration or just no Smeedee at all! Here is a list of things you can check to verify your IIS configuration.
 </p>
 
-<h3>App Pool .NET version</h3>
+<h4>App Pool .NET version</h4>
 
 <p>Make sure that the application pool that the smeedee application runs in is set to use .NET 4.0.
 <ol>
@@ -174,7 +178,7 @@ The server part of Smeedee is hosted by IIS, and if it is not correctly configur
 </ol>
  </p>
 
-<h3>ISAPI Filters for .NET 4.0</h3>
+<h4>ISAPI Filters for .NET 4.0</h4>
 
 <p>Make sure that the ISAPI fileters for .NET 4.0 are added and enabled</p>
 <ol>
@@ -188,7 +192,7 @@ The server part of Smeedee is hosted by IIS, and if it is not correctly configur
 </p>
 
 
-<h3>ISAPI & CGI Restrictions</h3>
+<h4>ISAPI & CGI Restrictions</h4>
 
 <p>Make sure that ISAPI and CGI is enabled</p>
 <ol>
@@ -199,7 +203,10 @@ The server part of Smeedee is hosted by IIS, and if it is not correctly configur
 <img src="images/ISAPI_CGI_RestrictionsDialog.png" />
 </li>
 </ol>
-</p>    
+</p>
+
+            </div>
+                
 
         </div>
     </div>
