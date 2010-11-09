@@ -225,8 +225,16 @@ div#textcontent {
 	padding:0 10px;
 }
 
-div#textcontent > p {
+#textcontent p {
 	margin-left:.5em;
+}
+
+#textcontent a {
+    color:#f25000;
+}
+
+#illustration #slider a {
+    color:#f25000;
 }
 
 div.contentRight > a:link,a:visited {
