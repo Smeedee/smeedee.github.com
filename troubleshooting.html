@@ -7,22 +7,8 @@
 <link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
 <script type="text/javascript" src="js/mootools-1.2-core.js"></script>
 <script type="text/javascript" src="js/noobslide.js"></script>
-<script type="text/javascript">
-window.addEvent('domready',function(){
-        var nS4 = new noobSlide({
-            box: $('slider'),
-            items: $$('#slider div'),
-            size: 800,
-            handles: $$('#handles span b'),
-            autoPlay: true,
-            onWalk: function(currentItem,currentHandle){
-                this.handles.removeClass('active');
-                currentHandle.addClass('active');
-            }
-            
-        });
-    });
-</script>
+
+
 </head>
 
 <body>
@@ -44,68 +30,6 @@ window.addEvent('domready',function(){
 
     <div id="illustration">
         
-            <p class="buttons" id="handles">
-                <span><b></b></span>
-                <span><b></b></span>
-                <span><b></b></span>
-                <span><b></b></span>
-                <span><b></b></span>
-            </p>
-            <div class="mask">
-                <div id="slider">
-        
-                    <div>
-                        <img src="images/agile_illustration.png" alt="Photo" />
-                        <h3>1. Lorem ipsum dolor sit amet</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
-                            Fusce hendrerit. Duis ultrices tristique diam.
-                        </p>
-                    </div>
-        
-                    <div>
-                        <img src="images/img2.jpg" alt="Photo" />
-                        <h3>2. Nullam porttitor tortor et sem</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque ac
-                            dolor. Aenean consectetuer nibh sed ante pretium egestas. Fusce hendrerit. Duis
-                            ultrices tristique diam.
-                        </p>
-                    </div>
-        
-                    <div>
-                        <img src="images/img3.jpg" alt="Photo" />
-                        <h3>3. Aenean consectetuer nibh sedt</h3>
-                        <ul>
-                            <li>Duis consequat laoreet libero.</li>
-                            <li>Nullam scelerisque porta arcu.</li>
-                            <li>Praesent ut tortor quis nunc vehicula interdum.</li>
-                            <li>Cras ultrices venenatis justo.</li>
-                        </ul>
-                    </div>
-        
-                    <div>
-                        <img src="images/img4.jpg" alt="Photo" />
-                        <h3>4. Pellentesque ac dolor</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
-                            Fusce hendrerit. Duis ultrices tristique diam.
-                        </p>
-                    </div>
-        
-                    <div>
-                        <img src="images/img5.jpg" alt="Photo" />
-                        <h3>5. Pellentesque ac dolor</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit. Pellentesque ac dolor. Aenean consectetuer nibh sed ante pretium egestas.
-                            Fusce hendrerit. Duis ultrices tristique diam.
-                        </p>
-                    </div>        
-                </div>
-            </div>
 
     </div>
     
@@ -220,6 +144,8 @@ window.addEvent('domready',function(){
 
 </body>
 </html>
+
+
 
 
 
