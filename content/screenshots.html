@@ -1,0 +1,33 @@
+<%inherit file="../templates/base.html"/>
+
+<h1>Screenshots</h1>
+<div id="slider">
+    <div>
+        1. a
+    </div>
+    <div>
+        2. b
+    </div>
+</div>
+ <p id='handles'>
+        <span>1. a&nbsp;</span>
+        <span>2. b&nbsp;</span>
+</p>
+
+<%def name='custom_page_script()'>
+    <script type="text/javascript">
+    window.addEvent('domready',function(){
+            var nS4 = new noobSlide({
+                box: $('slider'),
+                items: $$('#slider div'),
+                size: 800,
+                handles: $$('#handles span'),
+                onWalk: function(currentItem,currentHandle){
+                    this.handles.removeClass('active');
+                    currentHandle.addClass('active');
+                }
+                
+            });
+        });
+    </script>
+</%def>
