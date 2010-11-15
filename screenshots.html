@@ -6,14 +6,14 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
 <script type="text/javascript" src="js/mootools-1.2-core.js"></script>
-<script type="text/javascript" src="js/_class.noobSlide.packed.js"></script>
+<script type="text/javascript" src="js/noobslide.js"></script>
 
     <script type="text/javascript">
     window.addEvent('domready',function(){
             var nS4 = new noobSlide({
-                box: $('slider'),
-                items: $$('#slider div'),
-                size: 800,
+                box: $('ss_slider'),
+                items: $$('#ss_slider div'),
+                size: 200,
                 handles: $$('#handles span'),
                 onWalk: function(currentItem,currentHandle){
                     this.handles.removeClass('active');
@@ -83,12 +83,16 @@
                 
 
 <h1>Screenshots</h1>
-<div id="slider">
-    <div>
-        1. a
-    </div>
-    <div>
-        2. b
+<div id="ss_container">
+    <div id="ss_slider">
+        <div>
+            <p>This is some content</p>
+        </div>
+        <div>
+            <p>
+            This is more content, a cool screenshot or something else :)
+            </p>
+        </div>
     </div>
 </div>
  <p id='handles'>
