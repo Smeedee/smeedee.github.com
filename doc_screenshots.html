@@ -8,6 +8,21 @@
 <script type="text/javascript" src="js/mootools-1.2-core.js"></script>
 <script type="text/javascript" src="js/noobslide.js"></script>
 
+    <script type="text/javascript">
+    window.addEvent('domready',function(){
+            var nS4 = new noobSlide({
+                box: $('ss_slider'),
+                items: $$('#ss_slider div'),
+                size: 200,
+                handles: $$('#handles span'),
+                onWalk: function(currentItem,currentHandle){
+                    this.handles.removeClass('active');
+                    currentHandle.addClass('active');
+                }
+                
+            });
+        });
+    </script>
 
 </head>
 
@@ -67,17 +82,25 @@
             <div class="contentLeft">
                 
 
-<h1>Download and install</h1>
-
-<h3>Installation Requirements</h3>
-<ul>
-    <li>Microsoft .NET Framework 4.0 (<a href="http://www.microsoft.com">download</a>)</li>
-    <li>Internet Information Services with ASP.NET and IIS 6.0 Metabase Compatability enabled</li>
-</ul>
-
-<p>
-    If you're experiencing problems with Smeedee, please see our <a href="troubleshooting.html">troubleshooting</a> page!
+<h1>Screenshots</h1>
+<div id="ss_container">
+    <div id="ss_slider">
+        <div>
+            <p>This is some content</p>
+        </div>
+        <div>
+            <p>
+            This is more content, a cool screenshot or something else :)
+            </p>
+        </div>
+    </div>
+</div>
+ <p id='handles'>
+        <span>1. a&nbsp;</span>
+        <span>2. b&nbsp;</span>
 </p>
+
+
 
             </div>
             <div class="break"></div>    
