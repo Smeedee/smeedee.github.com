@@ -1,0 +1,75 @@
+<%inherit file="../templates/documentation.html"/>
+
+<h1>Getting started</h1>
+<p>
+Our Getting Started guide is written with the aim to help new developers to quickly get started contributing through Smeedee development.
+</p>
+
+<h4>1. Set up your development environment</h4>
+<p>
+See <a href="doc_dev_tools.html">Development tools</a> for a list of what you
+need.
+</p>
+
+<h4>2. Check out the source code</h4>
+<p>
+    We use SubVersion for Source Control Management. For Windows users a good
+    client is TortoiseSVN, however, any client of your choice can be used.
+</p>
+
+<p>
+    You can check out or Subversion repository from
+    http://smeedee.googlecode.com/svn/trunk
+</p>
+
+<h4>3. Open the main solution</h4>
+<p>
+    In the checked out folder, you can find our project in the trunk/source
+    folder. In this folder you will find the solution file Smeedee.sln which
+    contains all the projects needed for Smeedee. Smeedee.Client.Web is the
+    main entrance to the smeedee application and should be used as start up
+    project.    
+</p>
+
+<h4>4. What you can expect to find in the solution</h4>
+<p>
+Smeedee's Visual Studio solution is segmented into the following parts:
+</p>
+
+<p>
+<ul>
+    <li><b>Buildscripts</b> contains the scripts necessary to build Smeedee,
+    run tests and generate setup kits.</li>
+    <li><b>Client</b> contains client specific parts such as the client
+    application itself and the different widgets, all enforcing the MVVM
+    pattern.</li>
+    <li><b>Common</b> contains common framework across the application such as
+    settings and configuration.</li>
+    <li><b>DomainModel</b> contains the domain concepts that Smeedee's
+    different tasks and widgets are based on.</li>
+    <li><b>Scheduler/Tasks</b> contains the different tasks that are run server side such
+    as those used for gathering data from third party systems as well as the
+    system for scheduling and dispatch these tasks.</li>
+</ul>
+</p>
+
+<p>
+Most parts consists of three projects:
+<ul>
+    <li>1 project for production code</li>
+    <li>1 silverlight project for the view</li>
+    <li>1 project with tests</li>
+</ul>
+</p>
+
+<h4>5. Testing</h4>
+<p>
+    We are doing Test Driven Development (TDD) and strongly encourage you to do the
+    same as this will help make sure the source code easier to maintain as well as
+    minimizing technical debt and acting as documentation.
+</p>
+<p>
+    We are also using TinyBDD - A behaviour driven development (BDD) DSL for C#
+    which is also test runner agnostic and lets you do BDD syntax while writing
+    tests.
+</p>
