@@ -1,31 +1,31 @@
 <%inherit file="../templates/base.html"/>
 
 <h1>Screenshots</h1>
-<div id="ss_container">
-    <div id="ss_slider">
+<div id="ss_container" style="background:green;">
+    <div id="ss_slider" style="background:red;">
         <div>
             <p>This is some content</p>
         </div>
         <div>
-            <p>
-            This is more content, a cool screenshot or something else :)
-            </p>
+            <p>This is more content</p>
         </div>
     </div>
 </div>
- <p id='handles'>
-        <span>1. a&nbsp;</span>
-        <span>2. b&nbsp;</span>
-</p>
 
+<div id='handles'>
+    <span><b>1. a&nbsp;</b></span>
+    <span><b>2. b&nbsp;</b></span>
+</div>
+
+</div>
 <%def name='custom_page_script()'>
     <script type="text/javascript">
     window.addEvent('domready',function(){
             var nS4 = new noobSlide({
-                box: $('ss_slider'),
+                box: $('ss_container'),
                 items: $$('#ss_slider div'),
-                size: 200,
-                handles: $$('#handles span'),
+                size: 100,
+                handles: $$('#handles span b'),
                 onWalk: function(currentItem,currentHandle){
                     this.handles.removeClass('active');
                     currentHandle.addClass('active');
