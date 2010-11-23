@@ -11,12 +11,13 @@
     <script type="text/javascript">
     window.addEvent('domready',function(){
             var nS4 = new noobSlide({
-                box: $('ss_container'),
+                box: $('ss_slider'),
                 items: $$('#ss_slider div'),
-                size: 100,
-                handles: $$('#handles span b'),
+                size: 600,
+                handles: $$('#handles p img'),
                 onWalk: function(currentItem,currentHandle){
                     this.handles.removeClass('active');
+                    $('illustration').set('html',currentItem.innerHTML);
                     currentHandle.addClass('active');
                 }
                 
@@ -82,21 +83,39 @@
             <div class="contentLeft">
                 
 
-<h1>Screenshots</h1>
-<div id="ss_container" style="background:green;">
-    <div id="ss_slider" style="background:red;">
-        <div>
-            <p>This is some content</p>
-        </div>
-        <div>
-            <p>This is more content</p>
-        </div>
-    </div>
+<div id="ss_slider" style="visibility:hidden; overflow:hidden; width:1px; height:1px;">
+    
+    
+    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
+    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
+    <div><img src="images/extendable.png" style="height:300px" /></div>
+    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
+    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
+    <div><img src="images/extendable.png" style="height:300px" /></div>
+
+    
+    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
+    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
+    <div><img src="images/extendable.png" style="height:300px" /></div>
 </div>
 
 <div id='handles'>
-    <span><b>1. a&nbsp;</b></span>
-    <span><b>2. b&nbsp;</b></span>
+    <h1>Screenshots</h1>
+    <p>
+        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
+        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
+        <img src="images/extendable.png" style="width:100px; float:none;" />
+        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
+        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
+        <img src="images/extendable.png" style="width:100px; float:none;" />
+    </p>
+
+    <h1>Smeedee in use</h1>
+    <p>
+        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
+        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
+        <img src="images/extendable.png" style="width:100px; float:none;" />
+    </p>
 </div>
 
 </div>

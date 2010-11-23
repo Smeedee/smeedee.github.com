@@ -16,6 +16,7 @@
                 size: 800,
                 handles: $$('#handles span b'),
                 autoPlay: true,
+                interval: 10000,
                 onWalk: function(currentItem,currentHandle){
                     this.handles.removeClass('active');
                     currentHandle.addClass('active');
