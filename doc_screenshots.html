@@ -4,27 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Smeedee - A management tool for agile projects</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
-<link rel="stylesheet" href="css/noobslide.css" type="text/css" media="screen" />
-<script type="text/javascript" src="js/mootools-1.2-core.js"></script>
-<script type="text/javascript" src="js/noobslide.js"></script>
 
-    <script type="text/javascript">
-    window.addEvent('domready',function(){
-            $('illustration').set('align', 'center');
-            var nS4 = new noobSlide({
-                box: $('ss_slider'),
-                items: $$('#ss_slider div'),
-                size: 600,
-                handles: $$('#handles p img'),
-                onWalk: function(currentItem,currentHandle){
-                    this.handles.removeClass('active');
-                    $('illustration').set('html',currentItem.innerHTML);
-                    currentHandle.addClass('active');
-                }
-                
-            });
-        });
-    </script>
+    <script type="text/javascript" src="js/mootools.js"></script>
+    <script type="text/javascript" src="js/slimbox.js"></script> 
+	<link rel="stylesheet" href="css/slimbox.css" type="text/css" media="screen" /> 
 
 </head>
 
@@ -35,6 +18,7 @@
         <dl>
             
             <dt><a href="index.html">Home</a></dt>
+            <dt><a href="doc_screenshots.html">Screenshots</a></dt>
             <dt><a href="download.html">Download</a></dt>
             <dt><a href="doc_faq.html">FAQ</a></dt>
             <dt><a href="doc_start.html">Documentation</a></dt>
@@ -84,38 +68,28 @@
             <div class="contentLeft">
                 
 
-<div id="ss_slider" style="visibility:hidden; overflow:hidden; width:1px; height:1px;">
-    
-    
-    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
-    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
-    <div><img src="images/extendable.png" style="height:300px" /></div>
-    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
-    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
-    <div><img src="images/extendable.png" style="height:300px" /></div>
-
-    
-    <div><img src="images/agile_illustration.png" style="height:300px" /></div>
-    <div><img src="images/various_screenshots.png" style="height:300px" /></div>
-    <div><img src="images/extendable.png" style="height:300px" /></div>
-</div>
-
 <div id='handles'>
     <h1>Screenshots</h1>
     <p>
-        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
-        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
-        <img src="images/extendable.png" style="width:100px; float:none;" />
-        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
-        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
-        <img src="images/extendable.png" style="width:100px; float:none;" />
+        <a href="images/agile_illustration.png" rel="lightbox-screens" title="Illustration of the agile process"><img src="images/agile_illustration.png" style="width:100px; float:none;" /></a>
+        <a href="images/various_screenshots.png" rel="lightbox-screens" title="Some of the various Smeedee screens"><img src="images/various_screenshots.png" style="width:100px; float:none;" /></a>
+        <a href="images/extendable.png" rel="lightbox-screens" title="Smeedee is easily extendable"><img src="images/extendable.png" style="width:100px; float:none;" /></a>
+        <a href="images/agile_illustration.png" rel="lightbox-screens" title="Illustration of the agile process"><img src="images/agile_illustration.png" style="width:100px; float:none;" /></a>
+        <a href="images/various_screenshots.png" rel="lightbox-screens" title="Some of the various Smeedee screens"><img src="images/various_screenshots.png" style="width:100px; float:none;" /></a>
+        <a href="images/extendable.png" rel="lightbox-screens" title="Smeedee is easily extendable"><img src="images/extendable.png" style="width:100px; float:none;" /></a>
+        <a href="images/agile_illustration.png" rel="lightbox-screens" title="Illustration of the agile process"><img src="images/agile_illustration.png" style="width:100px; float:none;" /></a>
+        <a href="images/various_screenshots.png" rel="lightbox-screens" title="Some of the various Smeedee screens"><img src="images/various_screenshots.png" style="width:100px; float:none;" /></a>
+        <a href="images/extendable.png" rel="lightbox-screens" title="Smeedee is easily extendable"><img src="images/extendable.png" style="width:100px; float:none;" /></a>
     </p>
 
     <h1>Smeedee in use</h1>
     <p>
-        <img src="images/agile_illustration.png" style="width:100px; float:none;" />
-        <img src="images/various_screenshots.png" style="width:100px; float:none;" />
-        <img src="images/extendable.png" style="width:100px; float:none;" />
+        <a href="images/agile_illustration.png" rel="lightbox-usage"><img src="images/agile_illustration.png" style="width:100px; float:none;" /></a>
+        <a href="images/various_screenshots.png" rel="lightbox-usage"><img src="images/various_screenshots.png" style="width:100px; float:none;" /></a>
+        <a href="images/extendable.png" rel="lightbox-usage"><img src="images/extendable.png" style="width:100px; float:none;" /></a>
+        <a href="images/agile_illustration.png" rel="lightbox-usage"><img src="images/agile_illustration.png" style="width:100px; float:none;" /></a>
+        <a href="images/various_screenshots.png" rel="lightbox-usage"><img src="images/various_screenshots.png" style="width:100px; float:none;" /></a>
+        <a href="images/extendable.png" rel="lightbox-usage"><img src="images/extendable.png" style="width:100px; float:none;" /></a>
     </p>
 </div>
 
