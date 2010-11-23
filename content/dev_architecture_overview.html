@@ -1,0 +1,90 @@
+<%inherit file="../templates/documentation.html"/>
+
+<h1>Architecture Overview</h1>
+<p>
+    This article explains how the different parts of Smeedee are connected.
+    After reading this you should be able to roughly understand the overall
+    structure of Smeedee.
+</p>
+
+<p>
+Basically, Smeedee is designed to do two things:
+<ol>
+    <li>Get data from external systems by executing integration code wrapped in
+    tasks.</li>
+    <li>Show data on the screen through widgets</li>
+</ol>
+</p>
+
+<p>
+    The flowchart below shows the overall data flow of Smeedee, and how the
+    different components are connected.
+</p>
+
+<p>
+    <img src="images/smeedee_data_flow.png" alt="Smeedee Data Flow Diagram" style="width:90%;" />
+</p>
+
+<p>
+    In the diagram there are four distinct parts that are all important in
+    understanding Smeedee:
+</p>
+
+<h3>The Task Scheduler</h3>  
+<p>
+    The scheduler is a Windows Service running on the Smeedee Server. The
+    scheduler is responsible for managing the harvesting of data, as well as
+    potentially running other server side tasks. The actual data-harvesting is
+    performed by integration code contained in Tasks.  When the Scheduler
+    starts it loads all the tasks in configured in the database in a plug-in
+    fashion.  Each task is isolated from all the others, and work
+    independently.  An instance of a task tell the scheduler how often thy want
+    to be run data, and the scheduler keeps track of each task and dispatchs
+    them for execution according to the interval the task wanted. The task then
+    goes into whatever system it is designed to harvest from, and fetches data
+    from there. For example there is a Source Control task that asks Subversion
+    or TFS for the commit log. The task then translates the data from the
+    external system into a Domain Model known to Smeedee and stores the
+    harvested data in the Smeedee Database. 
+</p>
+
+<h3>The Smeedee Database</h3>
+<p>
+    When data is harvested from an external system, it is stored in the Smeedee
+    database. The database is a SQLite database that keeps a history of all the
+    data ever harvested. This data aggregation enables users of the Smeedee
+    system to present historical data in creative ways. For example trends can
+    be calculated when historical data is available. For system such as
+    Subversion, there is already historical data in the external system.
+    Syncronizing this into Smeedee helps stability and also relieves the
+    external system, as the Smeedee Database acts as a cache between clients
+    and the external system: One request from one client does not result in one
+    request to the external system.
+</p>
+<p>
+    Data is translated between a relational model and objects in our domain
+    model using the NHibernate ORM.
+</p>
+
+<h3>The Smeedee Server (Smeedee Web Services)</h3>
+<p>
+    The Smeedee server is a webserver hosted in Internet Information Services
+    (IIS). The server exposes a series of Web Services that provides access to
+    the Smeedee Database. The Smeedee Server also provides access to the
+    Smeedee client.
+</p>
+
+<h3>The Smeedee Client</h3>
+<p>
+    The client application is a Silverlight application that runs in the
+    browser. The client display is composed of a number of widgets running in a
+    slideshow like manner. Widgets ask the Smeedee server for fresh data from
+    the database as often as they require. Widgets can combine information from
+    the entire database to create a visualization of the data. E.g. there is a
+    widget that showis the latest commits in the source control system. The
+    Widget shows the commit message, and the combines the Source control data
+    with user data to get and show name and picture of the person who performed
+    the commit. Whenever a person performs a commit to the source control, the
+    message along with name and picture will be included in the widget shortly
+    after.
+</p>
