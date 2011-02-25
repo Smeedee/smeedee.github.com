@@ -17,17 +17,17 @@
     Smeedee's architecture is a fairly standard one and by no means an
     architecture to be intimidated by. There are clients, a server, a database
     and something that we have elected to call a Task Scheduler, which in
-    essence is just a windows service that supplies runs different tasks at
+    essence is just a windows service that runs different tasks at
     certain intervals, usually to supply the database with information. We'll
-    start at the top (the client) and work our way down meanwhile trying to
-    show how we in Smeedee do development on each each architectural element.
+    start at the top (the client) and work our way down while trying to
+    show how we in Smeedee do development on each architectural element.
 </p>
 
 <h3>1.1 Client</h3>
 <p>
     Development on a the client side is in most cases associated with our
     Widget concept, either doing maintenance on an existing one or making a
-    brand new one from scratch. When doing this kind of work its important to
+    brand new one from scratch. When doing this kind of work it is important to
     keep in mind the pattern that we use as a template for all our Widgets,
     namely the Model-View-ViewModel (MVVM) pattern. You can read more about
     MVVM in chapter 3.1.
@@ -39,15 +39,14 @@
     Smeedee.Client.Framework.SL project (ref 5.2). You can use these references to
     make a "Repository" class which acts as a service wrapper and is also
     placed in the same Smeedee.Client.Framework project, more specifically in a
-    folder conveniently marked Repositories. For fore information on the
+    folder conveniently marked Repositories. For more information on the
     repository pattern see chapter 3.3. In a few cases there are, and needs to
     be, a handful of helper classes in some of the widget projects, but the
     rule of thumb is to extract all general concepts to our domain model and
     all general logic and service references to the framework projects. For
     more information and examples on this take a look at chapter 5. We have
-    also made a short step by step walk-through for creating a new Widget and
-    its affiliated classes from a Visual Studio environment which you'll find
-    <a href="dev_widget_howto.html">here.</a>
+    also made a short step by step walk-through for <a href="dev_widget_howto.html">
+    creating a new Widget and its affiliated classes from a Visual Studio environment.</a>
     <%doc>
     TODO: legg til widget howto
     </%doc>
@@ -111,7 +110,7 @@
 <h3>3.1 Model-View-ViewModel (MVVM) pattern</h3>
 <p>
     MVVM is short for Model-View-ViewModel. It is a pattern based on the MVC
-    and MVP patterns. The basis of the pattern is basic MVC; you separate your
+    and MVP patterns. The basis of the pattern is basically MVC; you separate your
     code into a model, view and a controller. The new thing in MVVM compared to
     MVC is the ViewModel. This is a special model made only for the visual
     presentation, the view. This has very positive effect on the testability of
@@ -122,7 +121,7 @@
     Say you have a Customer model. The customer has all the default boring
     properties like name and age and so on. In the system, you need to show or
     hide alcoholic beverages depending on the customer age. So, where do you
-    put the logic? It is tempting to just put a condition in the view that sais
+    put the logic? It is tempting to just put a condition in the view that says
     if customer.Age is greater than 18 then show alcoholic beverages. This is the most
     basic trap, because you now have business logic in your GUI component.
     Great... The thing is that we do not want any logic in GUI components. They
@@ -167,7 +166,7 @@
     <ol>
         <li>The controller asks the repository to get a model, a Customer.</li>
         <li>The controller takes the model it gets and fills the ViewModel with
-        data. This is where the IsAlcoholBeveragesVisibl property is set by the
+        data. This is where the IsAlcoholBeveragesVisible property is set by the
         controller.</li>
         <li>The view is bound to the viewmodel, and changes in the view will
         propagate to the viewmodel and vice versa.</li>
@@ -270,7 +269,7 @@
 
 <h4>Mapping</h4>
 <p>
-    Nhibernate is a Object-Relational-Mapper, ORM for short. NHibernate takes a
+    Nhibernate is an Object-Relational-Mapper, ORM for short. NHibernate takes a
     domain model, in the form of a .NET class, and stores instances of this
     class into a relational database. In Smeedee we currently use SQLite as our
     relational database. To achieve this we need to give NHibernate some hints
@@ -303,7 +302,7 @@
 </pre>
 
 <p>
-    This mapping contains alot of information that Nhibernate uses to
+    This mapping contains a lot of information that Nhibernate uses to
     understand what to do when it is told to save a Changeset. For starters,
     the hibernate-mapping element says what assembly and namespace the mapped
     type lives in. It then goes on and defines a class element. In this element
@@ -427,6 +426,7 @@
     This is done because Silverlight projects can only reference other
     Silverlight projects. Widgets access data by way of repository classes.
     These again are wrapper classes for a specific web service.
+    <%doc>TODO: Fjerne det om "widgets access data by way of repo classes...."</%doc>
 </p>
 
 <p>
